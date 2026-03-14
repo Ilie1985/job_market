@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# data files you may not want to track
+data/raw_jobs.csv
+data/cleaned_jobs.csv
+
+# generated output files
+outputs/*.png
+
+# local database
+jobs.db
