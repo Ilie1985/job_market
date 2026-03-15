@@ -201,7 +201,7 @@ technical_skill_keywords = [
     "python", "sql", "excel", "power bi", "tableau", "aws", "azure", "gcp",
     "spark", "pandas", "numpy", "scikit-learn", "machine learning", "etl",
     "postgresql", "mysql", "sqlite", "docker", "kubernetes", "git", "linux",
-    "java", "javascript", "typescript", "react", "node", "r", "scala", "hadoop",
+    "java", "javascript", "typescript", "react", "node", "R", "scala", "hadoop",
     "airflow", "snowflake", "dbt", "terraform", "api", "mongodb", "redis"
 ]
 
