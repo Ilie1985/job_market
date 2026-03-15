@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
+import re
 
 os.makedirs("outputs", exist_ok=True)
 
@@ -70,3 +71,35 @@ for skill in ["Python", "SQL", "Excel", "Power BI"]:
 # ---------------------------
 salary_available = df["salary_clean"].notna().sum()
 print(f"\nRows with salary info: {salary_available}")
+
+def salary_midpoint(value):
+    if pd.isna(value):
+        return None
+    nums = re.findall(r"\d+", str(value).replace(",", ""))
+    nums = [int(n) for n in nums]
+    if len(nums) >= 2:
+        return (nums[0] + nums[1]) / 2
+    elif len(nums) == 1:
+        return nums[0]
+    return None
+
+df["salary_mid"] = df["salary_clean"].apply(salary_midpoint)
+salary_data = df["salary_mid"].dropna()
+
+if not salary_data.empty:
+    plt.figure(figsize=(10, 6))
+    salary_data.plot(kind="hist", bins=15)
+    plt.title("Salary Distribution")
+    plt.xlabel("Estimated Salary")
+    plt.ylabel("Frequency")
+    plt.tight_layout()
+    plt.savefig("outputs/salary_histogram.png")
+    plt.close()
+
+    print("\nSalary summary:")
+    print(f"Rows with usable salary data: {salary_data.shape[0]}")
+    print(f"Minimum estimated salary: {salary_data.min()}")
+    print(f"Maximum estimated salary: {salary_data.max()}")
+    print(f"Average estimated salary: {round(salary_data.mean(), 2)}")
+else:
+    print("\nNo usable salary data available for histogram.")
