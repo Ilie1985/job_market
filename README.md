@@ -24,9 +24,6 @@ This project was designed not only to show technical ability, but also to demons
 ## Data Source
 The job listing data used in this project was collected from **Remote OK**, a public job board focused on remote opportunities.
 
-Source used:
-- **Remote OK** — https://remoteok.com/
-
 The data collected from this source included fields such as:
 - job title
 - company
@@ -108,17 +105,6 @@ I wanted the project to look like a real pipeline rather than a one-off script. 
 - documenting
 
 This made the project much stronger than simply collecting a CSV and plotting it.
-
-### Why I chose Remote OK
-I needed a source that was:
-- public
-- relevant to remote and technical roles
-- manageable for a portfolio project
-- rich enough to provide useful fields like title, company, location, salary, and tags
-
-Remote OK was a suitable choice because it contains remote job listings with enough structured information to support data cleaning, analysis, and visualization.
-
----
 
 ## Solution Summary
 The solution I built is a **Job Market Intelligence Pipeline**.
@@ -277,33 +263,6 @@ The final project includes:
 
 ---
 
-## Project Structure
-
-```text
-job_market/
-│
-├── dashboard/
-│   └── dashboard_notes.md
-├── data/
-│   ├── raw_jobs.csv
-│   └── cleaned_jobs.csv
-├── notebooks/
-│   └── analysis.ipynb
-├── outputs/
-│   ├── jobs_by_city.png
-│   ├── remote_vs_nonremote.png
-│   ├── salary_histogram.png
-│   └── top_skills.png
-├── scripts/
-│   ├── analyze_data.py
-│   ├── clean_data.py
-│   ├── scraper.py
-│   ├── selenium_scraper.py
-│   └── store_data.py
-├── jobs.db
-├── README.md
-└── requirements.txt
-
 ## Data Cleaning Improvements
 
 One of the most important parts of this project was not just collecting data, but improving its quality.
@@ -335,14 +294,22 @@ This reflects a realistic data challenge rather than a perfectly clean source.
 ### Top Technical Skills
 This chart shows the most frequently detected technical skills.
 
+![Top Technical Skills](outputs/top_skills.png)
+
 ### Top Locations
 This chart shows the most common cleaned location values.
+
+![Top Locations](outputs/jobs_by_city.png)
 
 ### Remote vs Region-Specific / Unknown
 This chart compares remote, location-specific, and unknown work categories.
 
+![Remote vs Region-Specific / Unknown](outputs/remote_vs_nonremote.png)
+
 ### Salary Distribution
 This chart shows the distribution of valid estimated salary values.
+
+![Salary Distribution](outputs/salary_histogram.png)
 
 ---
 
