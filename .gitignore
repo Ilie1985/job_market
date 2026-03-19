@@ -7,8 +7,5 @@ __pycache__/
 data/raw_jobs.csv
 data/cleaned_jobs.csv
 
-# generated output files
-outputs/*.png
-
 # local database
 jobs.db
