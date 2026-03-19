@@ -294,22 +294,22 @@ This reflects a realistic data challenge rather than a perfectly clean source.
 ### Top Technical Skills
 This chart shows the most frequently detected technical skills.
 
-![Top Technical Skills](outputs/top_skills.png)
+![Top Technical Skills](./outputs/top_skills.png)
 
 ### Top Locations
 This chart shows the most common cleaned location values.
 
-![Top Locations](outputs/jobs_by_city.png)
+![Top Locations](./outputs/jobs_by_city.png)
 
 ### Remote vs Region-Specific / Unknown
 This chart compares remote, location-specific, and unknown work categories.
 
-![Remote vs Region-Specific / Unknown](outputs/remote_vs_nonremote.png)
+![Remote vs Region-Specific / Unknown](./outputs/remote_vs_nonremote.png)
 
 ### Salary Distribution
 This chart shows the distribution of valid estimated salary values.
 
-![Salary Distribution](outputs/salary_histogram.png)
+![Salary Distribution](./outputs/salary_histogram.png)
 
 ---
 
